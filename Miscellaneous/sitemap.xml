@@ -1,0 +1,55 @@
+/* ============================
+   DYNAMIC SITEMAP GENERATION SCRIPT
+   Generates a simple sitemap
+=============================== */
+
+// 1. List of all pages on the website
+const pages = [
+    { url: "https://www.yoursite.com/", lastmod: "2025-11-01", priority: "1.0" }, // Homepage
+    { url: "https://www.yoursite.com/about.html", lastmod: "2025-11-01", priority: "0.8" }, // About Us page
+    { url: "https://www.yoursite.com/teams.html", lastmod: "2025-11-01", priority: "0.8" }, // Teams page
+    { url: "https://www.yoursite.com/contact.html", lastmod: "2025-11-01", priority: "0.8" }, // Contact page
+    { url: "https://www.yoursite.com/enquiry.html", lastmod: "2025-11-01", priority: "0.8" }, // Enquiry page
+    // Add more pages here as needed
+];
+
+// 2. Create Sitemap XML structure dynamically
+function generateSitemap() {
+    let sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n';
+    sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
+    
+    pages.forEach(page => {
+        sitemap += '    <url>\n';
+        sitemap += `        <loc>${page.url}</loc>\n`;
+        sitemap += `        <lastmod>${page.lastmod}</lastmod>\n`;
+        sitemap += `        <priority>${page.priority}</priority>\n`;
+        sitemap += '    </url>\n';
+    });
+
+    sitemap += '</urlset>\n';
+
+    return sitemap;
+}
+
+// 3. Display generated Sitemap in the browser (or send it to server, etc.)
+function displaySitemap() {
+    const sitemap = generateSitemap();
+    
+    // Display it in the console (or you can choose to create a downloadable file)
+    console.log("Generated Sitemap:\n", sitemap);
+    
+    // Optionally, create a downloadable .xml file
+    const blob = new Blob([sitemap], { type: "application/xml" });
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "sitemap.xml"; // Filename for the downloaded file
+    link.textContent = "Click here to download your sitemap.xml";
+    
+    // Append the link to the page (for the user to download)
+    document.body.appendChild(link);
+}
+
+// Call the display function on page load
+window.onload = function() {
+    displaySitemap();
+};

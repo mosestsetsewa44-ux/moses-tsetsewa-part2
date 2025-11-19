@@ -1,0 +1,27 @@
+/* ============================
+   DYNAMIC ROBOTS META TAG SCRIPT
+   Controls Search Engine Crawling and Indexing
+=============================== */
+
+// Function to dynamically add the robots meta tag to the head
+function addRobotsMetaTag() {
+    // Create a meta element
+    const robotsMetaTag = document.createElement("meta");
+
+    // Define the robot settings (can be customized)
+    robotsMetaTag.name = "robots";    // This is the robots meta tag
+    robotsMetaTag.content = "index, follow";   // Default to index and follow links
+
+    // Optionally, prevent indexing of specific pages (can be customized per page)
+    if (window.location.pathname === "/checkout.html") {
+        robotsMetaTag.content = "noindex, nofollow";  // Prevent index/follow on checkout page
+    }
+
+    // Add the robots meta tag to the <head> of the document
+    document.head.appendChild(robotsMetaTag);
+}
+
+// Call the function to add the robots meta tag on page load
+window.onload = function() {
+    addRobotsMetaTag();
+};
