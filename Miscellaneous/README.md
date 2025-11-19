@@ -119,4 +119,25 @@ This project is licensed under the MIT License - see the LICENSE file for detail
   - Make sure to link to any other important files (e.g., the `LICENSE` file or contributing guidelines).
 
 
+## References
 
+
+- **HTML5**: [https://developer.mozilla.org/en-US/docs/Web/HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- **CSS3**: [https://developer.mozilla.org/en-US/docs/Web/CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- **JavaScript (ES6)**: [https://developer.mozilla.org/en-US/docs/Web/JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- **Font Awesome**: [https://fontawesome.com/](https://fontawesome.com/)
+  - Used for the social media icons in the footer.
+- **Google Maps API**: [https://developers.google.com/maps](https://developers.google.com/maps)
+  - Used for embedding the interactive Google Map in the Contact page.
+- **Google Fonts (Roboto)**: [https://fonts.google.com/](https://fonts.google.com/)
+  - Used for typography throughout the website.
+
+  ### Tools:
+- **Visual Studio Code**: [https://code.visualstudio.com/](https://code.visualstudio.com/)
+  - Used as the code editor during development.
+- **GitHub**: [https://github.com/](https://github.com/)
+  - Used for version control and hosting the project repository.
+- **Git**: [https://git-scm.com/](https://git-scm.com/)
+  - Used for version control and managing commits.
+- **Canva**: [https://www.canva.com/](https://www.canva.com/)
+  - Used to create custom graphics for the website.
